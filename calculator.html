@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="calculator.css">
+  <script src="calculator.js"></script>
+</head>
+
+<body>
+  <div class="backdrop">
+    <div class="main">
+      <p id="grade_calculator">
+        Grade Calculator
+      </p>
+      <div class="activities">
+        <p id="activities">
+          Activities
+        </p>
+        <p id="give_grades">
+          Give grades to the numeric activities:
+        </p>
+        <table id="table">
+          <tr>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th>Weight</th>
+            <th>Grade</th>
+            <th>Percent</th>
+          </tr>
+          <tr>
+            <td>Activity 1</td>
+            <td>A1</td>
+            <td><input type="number" id="weight1" /></td>
+            <td>
+              <input type="number" id="grade1a" onkeyup="show_percent('grade1a', 'grade1b', 'percent1')" /> /
+              <input type="number" id="grade1b" onkeyup="show_percent('grade1a', 'grade1b', 'percent1')" />
+            </td>
+            <td id="percent1"></td>
+          </tr>
+          <tr>
+            <td>Activity 2</td>
+            <td>A2</td>
+            <td><input type="number" id="weight2" /></td>
+            <td>
+              <input type="number" id="grade2a" onkeyup="show_percent('grade2a', 'grade2b', 'percent2')" /> /
+              <input type="number" id="grade2b" onkeyup="show_percent('grade2a', 'grade2b', 'percent2')" />
+            </td>
+            <td id="percent2"></td>
+          </tr>
+          <tr>
+            <td>Activity 3</td>
+            <td>A3</td>
+            <td><input type="number" id="weight3" /></td>
+            <td>
+              <input type="number" id="grade3a" onkeyup="show_percent('grade3a', 'grade3b', 'percent3')" /> /
+              <input type="number" id="grade3b" onkeyup="show_percent('grade3a', 'grade3b', 'percent3')" />
+            </td>
+            <td id="percent3"></td>
+          </tr>
+          <tr>
+            <td>Activity 4</td>
+            <td>A4</td>
+            <td><input type="number" id="weight4" /></td>
+            <td>
+              <input type="number" id="grade4a" onkeyup="show_percent('grade4a', 'grade4b', 'percent4')" /> /
+              <input type="number" id="grade4b" onkeyup="show_percent('grade4a', 'grade4b', 'percent4')" />
+            </td>
+            <td id="percent4"></td>
+          </tr>
+        </table>
+        <button id="add_activity" type="button">
+          ADD ACTIVITY
+        </button>
+        <p id="result">
+          Result
+        </p>
+        <span id="answer">
+        </span>
+        <button id="weighted" type="button" onclick="cal_weighted()">
+          WEIGHTED
+        </button>
+        <button id="mean" type="button" onclick="cal_mean()">
+          MEAN
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
